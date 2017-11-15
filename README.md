@@ -13,8 +13,8 @@ Python wrapper to XerlokAI services
         api = "Xerfrherhrg547457gshNOTREAL"
         client = XerlokVoice(api)
 
-        male = "/home/user/XERLOK_core/mycroft/voice_analisys/voice_gender/test_data/male/0.wav"
-        female = "/home/user/XERLOK_core/mycroft/voice_analisys/voice_gender/test_data/female/1.wav"
+        male = "/home/user/XERLOK_core/voice_analisys/voice_gender/test_data/male/0.wav"
+        female = "/home/user/XERLOK_core/voice_analisys/voice_gender/test_data/female/1.wav"
 
         print client.recognize_gender(male)[0][0]
         print client.recognize_gender(female)[0][0]
@@ -56,7 +56,7 @@ output
         {u'success': True}
         {u'success': True}
         {u'success': True}
-        ....
+        ....mycroft
         #  i usually consider everything < -0.15 == unknown
         squeaquy {u'squeaquy': -0.12640729187186814}
         squeaquy {u'squeaquy': -0.0790981900828033}
