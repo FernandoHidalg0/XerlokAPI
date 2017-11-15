@@ -7,11 +7,13 @@ Python wrapper to XerlokAI services
 
 
         from xerlok_api.voice import XerlokVoice
-        from os.path import join, dirname
-        from os import listdir
 
         api = "Xerfrherhrg547457gshNOTREAL"
         client = XerlokVoice(api)
+
+
+Gender Recognition
+
 
         male = "/home/user/voice_analisys/voice_gender/test_data/male/0.wav"
         female = "/home/user/voice_analisys/voice_gender/test_data/female/1.wav"
@@ -19,12 +21,31 @@ Python wrapper to XerlokAI services
         print client.recognize_gender(male)[0][0]
         print client.recognize_gender(female)[0][0]
 
+output
+
+        male
+        female
+
+
+Emotion Recognition
+
         bored = "/home/user/voice_analisys/voice_emotion/test/male/boredom/01.wav"
         angry = "/home/user/voice_analisys/voice_emotion/test/male/angry/03.wav"
 
         print client.recognize_emotion(bored)[0]
         print client.recognize_emotion(angry)[0]
-        print "\n"
+
+output
+
+        [u'boredom', u'neutral']
+        [u'angry', u'happy']
+
+
+Speaker Recognition
+
+
+        from os.path import join, dirname
+        from os import listdir
 
         # train some users
         train = join(dirname(__file__), "users")
@@ -41,23 +62,20 @@ Python wrapper to XerlokAI services
             folder = join(test, user)
             for wav in listdir(folder):
                 wav_path = join(folder, wav)
-                # correct name, api result
+                # i usually consider everything < -0.15 == unknown
                 print user, client.recognize_speaker(wav_path)
+
 
 output
 
-        male
-        female
-        [u'boredom', u'neutral']
-        [u'angry', u'happy']
+        {u'success': True}
+        {u'success': True}
+        {u'success': True}
+        {u'success': True}
+        {u'success': True}
 
-        {u'success': True}
-        {u'success': True}
-        {u'success': True}
-        {u'success': True}
-        {u'success': True}
         ....
-        #  i usually consider everything < -0.15 == unknown
+
         squeaquy {u'squeaquy': -0.12640729187186814}
         squeaquy {u'squeaquy': -0.0790981900828033}
         squeaquy {u'squeaquy': -0.09171938656225309}
