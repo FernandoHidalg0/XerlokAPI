@@ -2,6 +2,7 @@
 
 Python wrapper to XerlokAI services
 
+    pip install xerlok_api
 
 # XerlokVoice
 
