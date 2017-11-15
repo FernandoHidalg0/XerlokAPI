@@ -13,14 +13,14 @@ Python wrapper to XerlokAI services
         api = "Xerfrherhrg547457gshNOTREAL"
         client = XerlokVoice(api)
 
-        male = "/home/user/XERLOK_core/voice_analisys/voice_gender/test_data/male/0.wav"
-        female = "/home/user/XERLOK_core/voice_analisys/voice_gender/test_data/female/1.wav"
+        male = "/home/user/voice_analisys/voice_gender/test_data/male/0.wav"
+        female = "/home/user/voice_analisys/voice_gender/test_data/female/1.wav"
 
         print client.recognize_gender(male)[0][0]
         print client.recognize_gender(female)[0][0]
 
-        bored = "/home/user/XERLOK_core/voice_analisys/voice_emotion/test/male/boredom/01.wav"
-        angry = "/home/user/XERLOK_core/voice_analisys/voice_emotion/test/male/angry/03.wav"
+        bored = "/home/user/voice_analisys/voice_emotion/test/male/boredom/01.wav"
+        angry = "/home/user/voice_analisys/voice_emotion/test/male/angry/03.wav"
 
         print client.recognize_emotion(bored)[0]
         print client.recognize_emotion(angry)[0]
@@ -134,9 +134,9 @@ output
         api = "Xer89765467_FAKE_XXYYYTEST"
         client = XerlokFace(api)
 
-        sasha = "/home/user/XERLOK_core/image_analisys/Sasha Grey (4).jpg"
-        arnold = "/home/user/XERLOK_core/image_analisys/arnold.jpg"
-        arnold2 = "/home/user/XERLOK_core/image_analisys/old_arnold.jpg"
+        sasha = "/home/user/image_analisys/Sasha Grey (4).jpg"
+        arnold = "/home/user/image_analisys/arnold.jpg"
+        arnold2 = "/home/user/image_analisys/old_arnold.jpg"
 
         print client.recognize_face(sasha)
         print client.recognize_face(arnold)
