@@ -56,7 +56,7 @@ output
         {u'success': True}
         {u'success': True}
         {u'success': True}
-        ....mycroft
+        ....
         #  i usually consider everything < -0.15 == unknown
         squeaquy {u'squeaquy': -0.12640729187186814}
         squeaquy {u'squeaquy': -0.0790981900828033}
